@@ -4,6 +4,8 @@
   "description": "Real-time shared grid area control game",
   "scripts": {
     "install:all": "npm install --prefix server && npm install --prefix client",
+    "build": "npm run install:all && npm run build --prefix client",
+    "start": "node server/index.js",
     "dev:server": "npm run dev --prefix server",
     "dev:client": "npm run dev --prefix client",
     "dev": "npx concurrently \"npm run dev:server\" \"npm run dev:client\""
